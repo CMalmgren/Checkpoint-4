@@ -13,19 +13,22 @@ namespace Checkpoint4
             Console.WriteLine("Copyright Caroline Malmgren, 2018 :D");
 
             List<Movie> movies = new List<Movie>();
-
-            //Console.WriteLine("V for Vendetta");  //previous implementation, no longer in use
+            //previous implementation, no longer in use
+            //Console.WriteLine("V for Vendetta");
+            //Console.WriteLine("Star Wars Episode V");
             movies.Add(new Movie("V For Vendetta"));
+            movies.Add(new Movie("Star Wars Episode V"));
 
-            movies
-                .OrderBy(m => m.Name);
 
-            foreach (var movie in movies)
+            var bestMovies = movies
+                .OrderBy(m => m.Name)
+                .Select(m => m.Name);
+
+            foreach (var movie in bestMovies)
             {
-                Console.WriteLine(movie.Name);
+                Console.WriteLine(movie);
             }
 
-            
 
         }
     }
