@@ -6,6 +6,11 @@ namespace Checkpoint4
 {
     class Movie
     {
+        public Movie(string name)
+        {
+            Name = name;
+        }
+
         public string Name { get; set; }
     }
 }
